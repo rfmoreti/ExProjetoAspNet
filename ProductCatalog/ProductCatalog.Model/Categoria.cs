@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalog.Model
 {
+    
     public class Categoria : Base.GenericEntity
     {
         [Required, StringLength(50)]

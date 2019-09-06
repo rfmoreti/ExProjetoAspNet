@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,15 @@ namespace ProductCatalog.DAO
         {
 
         }
+
+        //Remove convenção de pluralização das tabelas,para não ficar Produtoes
+        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
+        
 
         //Definir os DbSet's para cada uma das models
         //Serão cradas tabela no banco para os DbStes/Models

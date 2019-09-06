@@ -30,6 +30,18 @@ namespace ProductCatalog.CMD
                 categoriaService.Inserir(cat3);
                 categoriaService.Inserir(cat4);
                 categoriaService.Inserir(cat5);
+
+                var user1 = new Usuario() { Nome = "Rafael", Email = "rmoreti@tec43.com", Senha = "12345tec" };
+                var user2 = new Usuario() { Nome = "Seninha", Email = "seninha@tec43.com", Senha = "12345tec" };
+                var user3 = new Usuario() { Nome = "Yuri", Email = "yuri@tec43.com", Senha = "12345tec" };
+                var user4 = new Usuario() { Nome = "Yan", Email = "yan@tec43.com", Senha = "12345tec" };
+
+                UsuarioSevice usuarioService = new UsuarioSevice(ctx);
+                usuarioService.Inserir(user1);
+                usuarioService.Inserir(user2);
+                usuarioService.Inserir(user3);
+                usuarioService.Inserir(user4);
+
                 ctx.SaveChanges();
             }
         }

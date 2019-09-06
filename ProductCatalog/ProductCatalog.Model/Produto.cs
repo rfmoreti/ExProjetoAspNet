@@ -8,6 +8,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProductCatalog.Model
 {
+    //Define o nome da tabela vinculada as models
+    //[Table("Produtos")]
+
     public class Produto : Base.GenericEntity
     {
         [Required, StringLength(100)]

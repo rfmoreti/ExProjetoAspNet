@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProductCatalog.Model
 {
+    
     public class Usuario : Base.GenericEntity
     {
 
