@@ -1,0 +1,17 @@
+Habilitar Migrations no Projeto
+-Sempre no projeto que tenha o Contexto de acesso ao banco de dados
+-Tools > Nugets Package Manager > Package Manager Console
+-Selecionar em Defaut Project o objeto onde tem o contexto 
+-Quando for habilitar o migration antes de fazer mudanças na model
+-Executar Enable-Migrations no PM
+-Realizar alterações na Model
+-Toda vez que fizer modificação nas Models
+-Executar Add-Migration no PM(cmd)- podendo atualizar a versão colocando o nome da versão na frente do comando
+
+
+
+
+
+
+
+  

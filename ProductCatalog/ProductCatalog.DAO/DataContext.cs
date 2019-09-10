@@ -15,7 +15,9 @@ namespace ProductCatalog.DAO
         //Crio um cnstrutor para o DataContext que passa a ConnectionString para a classe mãe(DbContext)
         public DataContext () : base(ConfigurationManager.ConnectionStrings["Conexao"].ConnectionString)
         {
-
+            //Após Habilitar Migrations (Enable-Migrations) no projeto defino o Initializer 
+            //do Banco de Dados para atualizar a versão do Database para a mais recente
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Migrations.Configuration>());
         }
 
         //Remove convenção de pluralização das tabelas,para não ficar Produtoes

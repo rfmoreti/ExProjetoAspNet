@@ -27,6 +27,9 @@ namespace ProductCatalog.Model
         [Required, StringLength(100)]
         public string Imagem { get; set; }
 
+        
+        public decimal Estoque { get; set; }
+
         //Associação com a classe Categoria (Relacionamento)
         public virtual Categoria Categoria { get; set; }
 

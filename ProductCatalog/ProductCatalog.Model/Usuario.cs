@@ -23,5 +23,7 @@ namespace ProductCatalog.Model
         [DataType(DataType.Password)]//Data Annotation que indica a renderização de um campo do tipo Senha(Password)
         public string Senha { get; set; }
 
+        [DataType(DataType.PhoneNumber), StringLength(20)]
+        public string Telefone { get; set; }
     }
 }
