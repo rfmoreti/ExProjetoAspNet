@@ -28,11 +28,14 @@ namespace ProductCatalog.Web
             bundles.Add(new StyleBundle("~/Content/site").Include(                      
                       "~/Content/site.css"));
 
-            bundles.Add(new StyleBundle("~/Content/dashboard").Include(
-                      "~/Content/dashboard.css"));
-
             bundles.Add(new ScriptBundle("~/bundles/holder").Include(
                       "~/Scripts/holder.js"));
+
+            bundles.Add(new StyleBundle("~/Content/dashboard").Include(
+                      "~/Content/dashboard.css", "~/Scripts/Chart.js/Chart.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/dashboard").Include(
+                      "~/Scripts/Chart.js/chart.js", "~/Scripts/feather-icons/feather.js"));
         }
     }
 }
